@@ -13,4 +13,4 @@ class Supervisor(models.Model):
 	user = models.ForeignKey(User, null=True, related_name="supervisor")
 	task = models.ManyToManyField(Task, related_name="task")
 	def __str__(self):
-		return self.user.name
+		return self.user.username
